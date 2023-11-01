@@ -1,0 +1,13 @@
+{
+  "name": "4-bullshit-generator",
+  "version": "1.0.0",
+  "description": "学习node的第一个练手项目 为了熟练掌握一些node的核心模块 ### 参考文献 https://juejin.cn/book/7133100888566005763/section/7133184975150514215#heading-0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
