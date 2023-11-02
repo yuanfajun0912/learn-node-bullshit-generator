@@ -12,18 +12,13 @@ loadCorpus().then(({ status, data }) => {
   const defaultTitle = randomTitleFunc()
   // 获取命令行的参数
   const argvOptions = parseOptions()
-  // 命令行输入的--help就打印参数手册
-  if ('help' in argvOptions) {
-    console.log(getCommonGuide())
-  } else {
-    // 文章title
-    const title = argvOptions.title || defaultTitle
-    // 生成的文章列表
-    const article = generate(`${title}`, { corpus: data, min: argvOptions.min || 1000, max: argvOptions.max || 2000 })
-    // 格式化文章
-    const articleStr = `${title}\n\n    ${article.join('\n    ')}`
-    // 保存文章
-    const saveFileUrl = saveCorpus(`${title}-${new Date().getTime()}`, articleStr)
-    console.log(`保存文章成功，目录在 ${saveFileUrl}`)
-  }
+  // 文章title
+  const title = argvOptions.title || defaultTitle
+  // 生成的文章列表
+  const article = generate(`${title}`, { corpus: data, min: argvOptions.min || 1000, max: argvOptions.max || 2000 })
+  // 格式化文章
+  const articleStr = `${title}\n\n    ${article.join('\n    ')}`
+  // 保存文章
+  const saveFileUrl = saveCorpus(`${title}-${new Date().getTime()}`, articleStr)
+  console.log(`保存文章成功，目录在 ${saveFileUrl}`)
 })
