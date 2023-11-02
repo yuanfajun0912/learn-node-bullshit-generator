@@ -7,9 +7,9 @@ import { interact } from './lib/interact.js'
 (async function () {
   // 用户输入
   const answers = await interact([
-    { title: '请输入标题', value: '前端' },
-    { title: '文章最小字数', value: 1000 },
-    { title: '文章最大字数', value: 2000 }
+    { text: '请输入标题', value: '前端' },
+    { text: '文章最小字数', value: 1000 },
+    { text: '文章最大字数', value: 2000 }
   ])
   const [optionTitle, optionMin, optionMax] = answers
   // 加载词法库
