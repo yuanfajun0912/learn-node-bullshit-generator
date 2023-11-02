@@ -11,6 +11,7 @@ readFile(resolve(dirname(fileURLToPath(url)), '../corpus/data.json'), 'utf-8', (
   console.log('data:', data) // 打印的buffer对象
 })
 
+//  1111
 
 // import { readFile } from 'fs'
 // // import path from 'path'
